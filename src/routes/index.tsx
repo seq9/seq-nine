@@ -6,8 +6,8 @@ import {
   Link,
   RouteProps,
 } from "react-router-dom"
-import Home from "../pages/home/home"
-import My from "../pages/my/my"
+import Home from "../views/home/home"
+import My from "../views/my/my"
 
 const Routes = () => {
   let routes = [
@@ -23,7 +23,7 @@ const Routes = () => {
   return (
     <>
       {routes.map((item, index) => (
-        <item.component />
+        <item.component key={index} />
       ))}
     </>
   )

@@ -1,14 +1,15 @@
-import React, { useState } from 'react'
-import Header from './components/header'
-import Home from './pages/home/home'
+import React, { FC, useState } from "react"
+import Header from "./components/header"
+import Home from "./views/home/home"
+import { Button } from "antd"
 
-function App() {
+const App: FC = () => {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
-      <Header />
-      <Home />
+      xx
+      <Button type="primary">Button</Button>
     </div>
   )
 }
