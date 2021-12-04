@@ -1,0 +1,4 @@
+import{R as r}from"./react.58d4b6d6.js";import{H as t}from"./styled-components.e3a8ba92.js";import{B as o}from"./antd.c57cb5ba.js";import"./object-assign.9840bf7d.js";import"./react-is.e26aad9c.js";import"./@emotion.5357a122.js";import"./hoist-non-react-statics.726cf55f.js";import"./rc-util.f76c03bd.js";import"./@babel.37ebccc5.js";import"./regenerator-runtime.2356381a.js";import"./react-dom.e5799e9e.js";import"./scheduler.c117dcf0.js";import"./classnames.ca41f454.js";import"./rc-motion.913a0644.js";import"./lodash.4e87c6f8.js";import"./@ant-design.51cad98a.js";import"./@ctrl.fa7cbd46.js";import"./rc-field-form.6ba790aa.js";import"./async-validator.5d25c98b.js";import"./memoize-one.4ee5c96d.js";import"./rc-pagination.faea05a0.js";import"./rc-picker.2982abfb.js";import"./rc-notification.1de9ff3b.js";function a(){return r.createElement("div",null,r.createElement(o,{type:"primary"},"home"))}t.div`
+  padding: 10px;
+  cursor: pointer;
+`;export{a as default};

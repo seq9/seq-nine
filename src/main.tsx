@@ -1,13 +1,17 @@
-import React from "react"
+import React, { Suspense } from "react"
 import ReactDOM from "react-dom"
-import App from "./App"
 import GlobalStyle from "./assets/style"
-import "antd/dist/antd.less"
+import App from "./App"
+import { Spin } from "antd"
+
+import "antd/dist/antd.variable.min.css"
 
 ReactDOM.render(
   <React.StrictMode>
     <GlobalStyle />
-    <App />
+    <Suspense fallback={<Spin />}>
+      <App />
+    </Suspense>
   </React.StrictMode>,
   document.getElementById("root")
 )

@@ -1,31 +1,35 @@
-import React from "react"
+import React, { lazy } from "react"
 import {
-  Route,
   BrowserRouter as Router,
   Switch,
-  Link,
-  RouteProps,
+  Route,
+  Redirect,
 } from "react-router-dom"
-import Home from "../views/home/home"
-import My from "../views/my/my"
 
 const Routes = () => {
   let routes = [
     {
       path: "/home",
-      component: Home,
+      name: "首页",
+      component: lazy(() => import("@/views/home/home")),
     },
     {
       path: "/my",
-      component: My,
+      name: "个人中心",
+      component: lazy(() => import("@/views/my/my")),
     },
   ]
   return (
-    <>
-      {routes.map((item, index) => (
-        <item.component key={index} />
-      ))}
-    </>
+    <Router>
+      <Switch>
+        {routes.map((item, index) => (
+          <Route exact path={item.path} key={index}>
+            <item.component />
+          </Route>
+        ))}
+        <Redirect from="/*" to="/home" />
+      </Switch>
+    </Router>
   )
 }
 
